@@ -1,6 +1,5 @@
 package com.goit;
 
-import com.goit.model.NameLastname;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -14,6 +13,7 @@ public class Demo {
                     .setPrettyPrinting()
                     .serializeNulls()
                     .create();
+            assert stream != null;
             NameLastname nameLastname = gson.fromJson(new String(stream.readAllBytes()), NameLastname.class);
             System.out.println(nameLastname);
             System.out.println(("==============================="));
